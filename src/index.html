@@ -1,18 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+  
   <head>
     <meta charset="UTF-8" />
+    
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Uhørt</title>
   </head>
-  <body class="grid place-items-center p-8">
-    <h1 class="text-xl font-bold text-emerald-700">Tailwind Template 2023</h1>
-    <p class="text-emerald-500">
-      Powered by <a href="https://vitejs.dev/guide">Vite</a>
-    </p>
-    <img src="img/vite.svg" alt="Vite Logo" />
+  <body>
+    <header class="text-center pb-12 pt-12">
+      <h1 class="text-5xl font-bold text-pink-500">UHØRT</h1>
+      
+    </header>
 
-    <script type="module" src="./main.js"></script>
+    
+    <!-- Overskrift -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+      <div class=" overskrift text-center pb-12">
+        <blockquote class="text-4xl font-semibold italic text-centermb-8 font-bold text-3xl md:text-4xl lg:text-5xl font-heading">
+          
+          <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+            <span class="relative text-white">Line-up</span>
+          </span>
+          2023
+        </blockquote>
+
+          <h2 class="mt-5 text-4xl font-bold text-indigo-600">
+              Artister
+          </h2>
+
+      </div>
+
+      <!-- Nav knapper -->
+      <section class=" flex flex-row justify-between">
+        <div class="m-5 ">
+      <button type="button" class="text-white m-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Uge 10</button>
+      <button type="button" class="text-white m-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Uge 11</button>
+      <button type="button" class="text-white m-1 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Uge 12</button>
+        </div>
+        <!-- søg -->
+        <div class="flex items-center">
+          <div class="relative w-full">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+            </div>
+            <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Søg artist" required>
+          </div>
+           <button type="submit" class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            <span class="sr-only">Søg artist</span>
+          </button>
+        </div>
+      </section>
+        <!-- nav dage -->
+      <div class=" mb-5 w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <ul class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
+            <li class="w-full">
+                <button id="stats-tab" data-tabs-target="#stats" type="button" role="tab" aria-controls="stats" aria-selected="true" class="inline-block w-full p-4 rounded-tl-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">d. 8/7</button>
+            </li>
+            <li class="w-full">
+                <button id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false" class="inline-block w-full p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">d. 9/7</button>
+            </li>
+            <li class="w-full">
+                <button id="faq-tab" data-tabs-target="#faq" type="button" role="tab" aria-controls="faq" aria-selected="false" class="inline-block w-full p-4 rounded-tr-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">d. 10/7</button>
+            </li>
+        </ul>
+      </div>
+
+    
+    <section>
+      <!-- Content -->
+      <div class="content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="w-full bg-gray-400 rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center hover:bg-indigo-500 hover:ring-indigo-500">
+              <div class="hover:bg-gray-500 ">
+                  <img class="object-center object-cover h-auto w-full" src="/AdobeStock_302845081.jpeg" alt="photo">
+              </div>
+              <div class="text-center py-8 sm:py-6">
+                  <p class="text-xl text-gray-700 font-bold mb-2">Dany Bailey</p>
+                  <p class="text-base text-white font-normal">Software Engineer</p>
+              </div>
+          </div>
+          <div class="w-full bg-gray-400 rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center hover:bg-indigo-500 hover:ring-indigo-500">
+              <div>
+                  <img class="object-center object-cover h-auto w-full" src="/AdobeStock_302845081.jpeg" alt="photo">
+              </div>
+              <div class="text-center py-8 sm:py-6">
+                  <p class="text-xl text-gray-700 font-bold mb-2">Lucy Carter</p>
+                  <p class="text-base text-white font-normal">Graphic Designer</p>
+              </div>
+          </div>
+          <div class="w-full bg-gray-400 rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center hover:bg-indigo-500 hover:ring-indigo-500">
+              <div>
+                  <img class="object-center object-cover h-auto w-full" src="/AdobeStock_302845081.jpeg" alt="photo">
+              </div>
+              <div class="text-center py-8 sm:py-6">
+                  <p class="text-xl text-gray-700 font-bold mb-2">Jade Bradley</p>
+                  <p class="text-base text-white font-normal">Dev Ops</p>
+              </div>
+          </div>
+          <div class="w-full bg-gray-400 rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center hover:bg-indigo-500 hover:ring-indigo-500">
+              <div>
+                  <img class="object-center object-cover h-auto w-full" src="/AdobeStock_302845081.jpeg" alt="photo">
+              </div>
+              <div class="text-center py-8 sm:py-6">
+                  <p class="text-xl text-gray-700 font-bold mb-2">Dany Bailey</p>
+                  <p class="text-base text-white font-normal">Software Engineer</p>
+              </div>
+          </div>
+          <div class="w-full bg-gray-400 rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center hover:bg-indigo-500 hover:ring-indigo-500">
+              <div>
+                  <img class="object-center object-cover h-auto w-full" src="/AdobeStock_302845081.jpeg" alt="photo">
+              </div>
+              <div class="text-center py-8 sm:py-6">
+                  <p class="text-xl text-gray-700 font-bold mb-2">Lucy Carter</p>
+                  <p class="text-base text-white font-normal">Graphic Designer</p>
+              </div>
+          </div>
+          <div class="w-full bg-gray-400 rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center hover:bg-indigo-500 hover:ring-indigo-500">
+              <div>
+                  <img class="object-center object-cover h-auto w-full" src="/AdobeStock_302845081.jpeg" alt="photo">
+              </div>
+              <div class="text-center py-8 sm:py-6">
+                  <p class="text-xl text-gray-700 font-bold mb-2">Jade Bradley</p>
+                  <p class="text-base text-white font-normal">Dev Ops</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+<section class=" pt-14">
+  <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-200">
+  <div class=" overskrift text-center pb-12 pt-14">
+      <h2 class="mt-5 text-4xl font-bold text-indigo-600">
+          Program
+      </h2>
+  </div>
+
+  <div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Tid
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Scene
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Artist
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    12-13
+                </th>
+                <td class="px-6 py-4">
+                    Orange
+                </td>
+                <td class="px-6 py-4">
+                    Justin Bieber
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  13-14
+                </th>
+                <td class="px-6 py-4">
+                  Rød
+                </td>
+                <td class="px-6 py-4">
+                    Black shoes
+                </td>
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    15-16
+                </th>
+                <td class="px-6 py-4">
+                    Grøn
+                </td>
+                <td class="px-6 py-4">
+                  Cool funk
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</section>
+</section>
+<footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+  <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-200">
+  <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+      </li>
+      <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+      </li>
+      <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+      </li>
+      <li>
+          <a href="#" class="hover:underline">Contact</a>
+      </li>
+  </ul>
+</footer>
+
+ 
+<script type="module" src="./main.js"></script>
   </body>
 </html>
